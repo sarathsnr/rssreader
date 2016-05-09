@@ -12,16 +12,25 @@
 </head>
 
 <body>
-<h1>{{ title }} is working!</h1>
+<div class="container">
+<div class="page-header">
+<h1>RSS Channels</h1>
+</div>
+
 
 {% for obj in queryset %}
-<ul><l1><h3>{{ obj.title }}</h3>
+<ul class="list-group">
+  <li class="list-group-item">
+    <h3>{{ obj.title }}</h3>
 <a href="/url/{{ obj.id }}/">{{ obj.id }} ) {{ obj.url }}</a> <br/>
 
 </li></ul>
 {% endfor %}
 
-
+</div>
 </body>
+
+
+
 
 </html>

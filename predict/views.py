@@ -1,9 +1,14 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, render_to_response
 from django.http import HttpResponse
 import feedparser
 from .forms import UrlForm
 from .models import Urllist
 # Create your views here.
+
+
+
+def index(request):
+	return render_to_response('home.html')
 
 def predictpage(request):
 	form = UrlForm(request.POST or None)

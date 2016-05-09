@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from predict.views import predictpage,url_list,parse,parseclicked
+from predict.views import predictpage,url_list,parse,parseclicked,index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^predict/', predictpage),
     url(r'^urls/', url_list),
     url(r'^feed/', parse),
-    url(r'^url/(?P<id>\d+)/$', parseclicked)
+    url(r'^url/(?P<id>\d+)/$', parseclicked),
+    url(r'^$', index),
 ]
